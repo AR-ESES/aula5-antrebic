@@ -9,15 +9,18 @@ function setup() {
 function draw() {
 
 	background(0)
-	if(mouseY>=height/2) {
 
-    noFill();
-
-	}
-
+	if(mouseY>=height/2 && mouseX<=width/2)  
+    fill(0,0,255);
+	
+    else if(mouseY<height/2 && mouseX<=width/2) 
+    fill(255,0,0);
+  	
+    else if(mouseY<height/2 && mouseX>width/2) 
+    fill(0,255,0); 
 
 	else{
-		 fill(230)
+		 noFill();
 	}
 
 	stroke(230);
